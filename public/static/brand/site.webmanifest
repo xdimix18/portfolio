@@ -1,11 +1,11 @@
 {
-  "name": "Dimitrije Ačković — Portfolio",
+  "name": "Dimitrije Ačković — 3D dizajn, štampa i tehnička rješenja",
   "short_name": "D. Ačković",
-  "description": "Portfolio — self-hosted AI sistemi, Python/Docker infrastruktura, embedded.",
+  "description": "3D dizajn i štampa, grafički dizajn, AI alati, serveri i servis opreme. Podgorica, Crna Gora.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#010102",
-  "theme_color": "#010102",
+  "background_color": "#faf9f7",
+  "theme_color": "#5b53d6",
   "icons": [
     {
       "src": "/static/brand/favicon-192.png",
