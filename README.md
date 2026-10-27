@@ -22,7 +22,7 @@ public/
 └── static/
     ├── css/site.css        # kompletan dizajn sistem (jedan fajl)
     ├── brand/              # favicon, mark.svg, wordmark.svg, og.png, og-en.png, webmanifest
-    └── fonts/              # Instrument Serif + Instrument Sans (woff2, self-hosted)
+    └── fonts/              # Libre Baskerville + Instrument Sans (woff2, self-hosted)
 
 tools/
 ├── make_og.py              # generise obje OG slike (1200x630)
@@ -31,13 +31,15 @@ tools/
 
 ## Dizajn
 
-Svijetla, urednička tema: papirna podloga `#faf9f7`, indigo akcenat `#5b53d6` za
-tehnički dio i topla terakota `#a4552f` za dizajn i 3D. Tamna tema je podržana
-preko `prefers-color-scheme` (nije potreban prekidač ni JavaScript).
+Tema **"Gold Blue Sleek Corporate"** (po Canva dizajnu, `canva.link/eyn7mznfnefinla`):
+duboko mornarsko plava `#1f2147` i toplo zlato `#cfae7b` na papirnoj podlozi
+`#f5f2ee`. **Oštre ivice (radius 0), bez sjenki** — dubina se dobija samo bojom i
+linijom od 1 px. Tamna tema je podržana preko `prefers-color-scheme` (nije
+potreban prekidač ni JavaScript).
 
-Tipografija: **Instrument Serif** za naslove, **Instrument Sans** za tekst.
-Oba fonta su lokalna (`static/fonts/*.woff2`), tako da sajt ne zavisi od tuđih
-servera i nema nijedan eksterni zahtjev.
+Tipografija: **Libre Baskerville** za naslove (visokokontrastni serif),
+**Instrument Sans** za tekst. Oba fonta su lokalna (`static/fonts/*.woff2`),
+tako da sajt ne zavisi od tuđih servera i nema nijedan eksterni zahtjev.
 
 Svi tokeni (boje, radijusi, sjenke, fontovi) su na jednom mjestu, u `:root`
 u `static/css/site.css`. Dugme u primarnoj boji koristi `--accent-ink`, koji se
