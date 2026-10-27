@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="cnr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dimitrije Ačković — Software Engineering &amp; AI</title>
+<meta name="description" content="Student softverskog inženjeringa na ETF UCG. Radim na self-hosted AI sistemima, Python/Docker infrastrukturi i embedded projektima.">
+<link rel="canonical" href="https://portfolio.ai-sol.me/">
+<meta name="theme-color" content="#010102">
+<meta name="author" content="Dimitrije Ačković">
+
+<link rel="alternate" hreflang="cnr" href="https://portfolio.ai-sol.me/">
+<link rel="alternate" hreflang="en" href="https://portfolio.ai-sol.me/en/">
+
+<link rel="icon" href="/static/brand/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/static/brand/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/static/brand/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/static/brand/apple-touch-icon.png">
+<link rel="manifest" href="/static/brand/site.webmanifest">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dimitrije Ačković">
+<meta property="og:title" content="Dimitrije Ačković — Software Engineering &amp; AI">
+<meta property="og:description" content="Student softverskog inženjeringa na ETF UCG. Self-hosted AI sistemi, Python/Docker infrastruktura, embedded.">
+<meta property="og:url" content="https://portfolio.ai-sol.me/">
+<meta property="og:image" content="https://portfolio.ai-sol.me/static/brand/og.png">
+<meta property="og:locale" content="cnr_ME">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preload" href="/static/fonts/PressStart2P-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/site.css">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Dimitrije Ačković","alternateName":"dimce","url":"https://portfolio.ai-sol.me/","email":"mailto:dimitrije.ackovic18@gmail.com","jobTitle":"Software Engineering student","affiliation":{"@type":"CollegeOrUniversity","name":"Elektrotehnički fakultet, Univerzitet Crne Gore"},"address":{"@type":"PostalAddress","addressCountry":"ME"},"sameAs":["https://github.com/xdimix18"],"knowsAbout":["Python","Docker","Linux","LLM integration","Embedded systems"]}
+</script>
+</head>
+<body>
+
+<input type="checkbox" id="nav-toggle" class="nav-toggle-cb" hidden>
+
+<nav>
+  <div class="wrap nav-in">
+    <a class="brand" href="/" aria-label="Dimitrije Ačković — početna">
+      <svg class="brand-mark" viewBox="0 0 254.6 254.63" fill="currentColor" aria-hidden="true">
+        <path d="M0 254.63L0 72.75L36.38 72.75L36.38 36.37L72.75 36.37L72.75 0L181.88 0L181.88 36.37L218.26 36.37L218.26 72.75L254.6 72.75L254.6 254.63L181.85 254.63L181.85 181.88L72.75 181.88L72.75 254.63Z"/>
+        <path d="M72.75 145.5L181.88 145.5L181.88 72.75L145.51 72.75L145.51 36.37L109.13 36.37L109.13 72.75L72.75 72.75Z"/>
+      </svg>
+      <span class="brand-name">D. Ačković</span>
+    </a>
+
+    <label for="nav-toggle" class="nav-burger" role="button" tabindex="0" aria-controls="nav-panel" aria-label="Meni">
+      <span></span><span></span><span></span>
+    </label>
+
+    <div class="nav-links" id="nav-panel">
+      <a href="#projekti">Projekti</a>
+      <a href="#vjestine">Vještine</a>
+      <a href="#obrazovanje">Obrazovanje</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="lang" href="/en/" hreflang="en" lang="en">EN</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <span class="eyebrow"><span class="dot"></span>Otvoren za praksu i saradnju</span>
+    <h1>Gradim <span class="grad">self-hosted AI sisteme</span> i infrastrukturu koja ih drži.</h1>
+    <p class="lede">
+      Ja sam Dimitrije Ačković, student softverskog inženjeringa na Elektrotehničkom fakultetu
+      u Podgorici. Radim na Python/Docker servisima, integracijama velikih jezičkih modela i
+      embedded projektima — najviše volim kad sve to radi na mom serveru, bez tuđih clouda.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#projekti">Pogledaj projekte</a>
+      <a class="btn" href="mailto:dimitrije.ackovic18@gmail.com">Kontakt</a>
+      <a class="btn btn-ghost" href="https://github.com/xdimix18" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+    <p class="hero-note">Podgorica, Crna Gora · Srpski / Bosanski / Hrvatski · Engleski</p>
+  </div>
+</header>
+
+<main>
+
+<section id="o-meni">
+  <div class="wrap">
+    <div class="sec-label">01 — O meni</div>
+    <div class="about">
+      <div>
+        <p>
+          Krenuo sam od hardvera — mikrokontrolera, senzora i lemilice — a onda me put odveo
+          ka serverima i jezičkim modelima. Danas mi je glavni fokus <strong>self-hosted AI</strong>:
+          kako da modeli, baze i alati rade pouzdano na sopstvenoj infrastrukturi, sa pravim
+          autentifikacijom, monitoringom i backupom, a ne samo kao demo u notebooku.
+        </p>
+        <p>
+          Praktično, to znači dosta Python-a (Flask, FastAPI), Docker Compose i Linux administracije,
+          mreža i reverznih proxy-ja, plus povremeno C za embedded stvari. Volim da razumijem
+          sistem od dna: od toga kako se packet rutira do toga zašto je model počeo da halucinira.
+        </p>
+        <p>
+          Radio sam i u servisu za računarsku opremu, pa mi nije stran ni hardverski dio — od
+          dijagnostike do zamjene komponenti. Taj dio mi je dao naviku da problem rješavam
+          dok stvarno ne proradi, a ne dok ne izgleda da radi.
+        </p>
+      </div>
+      <dl class="facts">
+        <div><dt>Lokacija</dt><dd>Podgorica, Crna Gora</dd></div>
+        <div><dt>Fakultet</dt><dd>ETF UCG, Primijenjeno računarstvo</dd></div>
+        <div><dt>Indeks</dt><dd>76/2024</dd></div>
+        <div><dt>Fokus</dt><dd>AI infrastruktura, Python, Docker</dd></div>
+        <div><dt>GitHub</dt><dd>@xdimix18</dd></div>
+        <div><dt>Status</dt><dd>Otvoren za praksu</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="projekti">
+  <div class="wrap">
+    <div class="sec-label">02 — Projekti</div>
+    <div class="sec-head">
+      <h2>Stvari koje sam napravio i one na kojima još radim</h2>
+      <p>Od produkcijske platforme do studentskih projekata i alata koje svakodnevno koristim.</p>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="card-top">
+          <span class="badge live">U produkciji</span>
+        </div>
+        <h3>AI Solutions</h3>
+        <p class="tag">
+          Platforma za iznajmljivanje self-hosted AI harness-ova. Flask portal sa landing stranicom,
+          registracijom i korisničkim dashboard-om, SSO preko Authentik-a, Cloudflare tuneli za
+          izlaganje servisa, dvojezično (MNE/EN) i sopstveni dizajn sistem. Radi na mom serveru,
+          sa backup procedurama i monitoringom.
+        </p>
+        <div class="stack">
+          <span class="chip">Python</span><span class="chip">Flask</span>
+          <span class="chip">Docker</span><span class="chip">Authentik SSO</span>
+          <span class="chip">Cloudflare Tunnel</span>
+        </div>
+        <div class="card-foot">
+          <a class="card-more" href="https://ai-sol.me" target="_blank" rel="noopener">ai-sol.me <span class="arw">→</span></a>
+          <span class="card-note">self-hosted</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="badge oss">Open source</span>
+        </div>
+        <h3>Odysseus</h3>
+        <p class="tag">
+          Self-hosted AI workspace, fork sa mojim izmjenama (DIMCIC). Radio sam na upravljanju
+          model endpoint-ima, admin panelu sa grupisanjem endpoint-a, skill routing sloju i
+          dodavanju MCP servera. Koristi se kao glavni interfejs za svakodnevni rad sa modelima.
+        </p>
+        <div class="stack">
+          <span class="chip">Python</span><span class="chip">LLM integracije</span>
+          <span class="chip">SQLite</span><span class="chip">Docker</span>
+        </div>
+        <div class="card-foot">
+          <a class="card-more" href="https://github.com/xdimix18" target="_blank" rel="noopener">GitHub <span class="arw">→</span></a>
+          <span class="card-note">fork + razvoj</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="badge live">Aktivno</span>
+        </div>
+        <h3>Skill Router</h3>
+        <p class="tag">
+          Mikroservis za rutiranje znanja: vektorska pretraga nad bibliotekom procedura, sa
+          automatskim odabirom relevantnih skill-ova za zadatak i vizualizacijom grafova
+          zavisnosti. Flask + fastembed, radi kao zaseban kontejner.
+        </p>
+        <div class="stack">
+          <span class="chip">Flask</span><span class="chip">fastembed</span>
+          <span class="chip">Vektorska pretraga</span><span class="chip">Graph viz</span>
+        </div>
+        <div class="card-foot">
+          <span class="card-note">interni servis</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="badge dev">U razvoju</span>
+        </div>
+        <h3>Audiobook Studio</h3>
+        <p class="tag">
+          Desktop aplikacija koja pretvara PDF i EPUB knjige u audioknjige koristeći lokalni
+          Qwen3-TTS model preko ComfyUI grafova. PySide6 interfejs, GPU akceleracija preko ROCm,
+          sa kontrolom glasa i obrade teksta po poglavljima.
+        </p>
+        <div class="stack">
+          <span class="chip">PySide6</span><span class="chip">Qwen3-TTS</span>
+          <span class="chip">ComfyUI</span><span class="chip">ROCm</span>
+        </div>
+        <div class="card-foot">
+          <span class="card-note">lokalno, bez clouda</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="badge uni">Embedded</span>
+        </div>
+        <h3>Flipper Zero — OBD-II</h3>
+        <p class="tag">
+          FAP aplikacija za Flipper Zero koja komunicira sa ELM327 OBD-II adapterom preko GPIO UART-a.
+          Namijenjena čitanju dijagnostičkih kodova i osnovnih parametara vozila bez telefona ili laptopa.
+        </p>
+        <div class="stack">
+          <span class="chip">C</span><span class="chip">Flipper SDK</span>
+          <span class="chip">UART</span><span class="chip">OBD-II</span>
+        </div>
+        <div class="card-foot">
+          <span class="card-note">hardver</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="badge uni">Embedded</span>
+        </div>
+        <h3>Sistem kontrole pristupa</h3>
+        <p class="tag">
+          RFID sistem pristupa na Arduino Uno: RC522 čitač kartica, LCD za status, buzzer i
+          senzor za detekciju. Projektovao sam i logiku provjere kartica i upravljanje
+          periferijama bez blokiranja glavne petlje.
+        </p>
+        <div class="stack">
+          <span class="chip">Arduino Uno</span><span class="chip">RFID-RC522</span>
+          <span class="chip">LCD</span><span class="chip">C++</span>
+        </div>
+        <div class="card-foot">
+          <span class="card-note">fakultetski projekat</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <span class="badge oss">Alati</span>
+        </div>
+        <h3>Organizacija podataka — dorg / dsort / dock</h3>
+        <p class="tag">
+          Mali Python CLI alati za sređivanje haotičnih foldera: organizacija po tipu i datumu,
+          sortiranje i provjera duplikata. Ključno pravilo: nikad ne brišu fajlove, samo
+          predlažu i prebacuju uz log svake akcije.
+        </p>
+        <div class="stack">
+          <span class="chip">Python</span><span class="chip">CLI</span>
+          <span class="chip">Automatizacija</span>
+        </div>
+        <div class="card-foot">
+          <span class="card-note">svakodnevna upotreba</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="vjestine">
+  <div class="wrap">
+    <div class="sec-label">03 — Vještine</div>
+    <div class="sec-head">
+      <h2>Čime radim</h2>
+      <p>Alati i tehnologije koje koristim u stvarnim projektima, ne samo iz kurseva.</p>
+    </div>
+
+    <div class="skills">
+      <div class="skill-col">
+        <h3>Backend</h3>
+        <ul>
+          <li>Python — Flask, FastAPI</li>
+          <li>REST API dizajn</li>
+          <li>SQLite, osnovni SQL</li>
+          <li>Vektorske baze i pretraga</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h3>Infrastruktura</h3>
+        <ul>
+          <li>Docker i Docker Compose</li>
+          <li>Linux administracija (Ubuntu/Debian)</li>
+          <li>Nginx i reverzni proxy</li>
+          <li>Cloudflare tuneli, Tailscale</li>
+          <li>SSH, backup i restore</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h3>AI / LLM</h3>
+        <ul>
+          <li>Integracija LLM API-ja</li>
+          <li>Lokalni modeli (Ollama, TTS)</li>
+          <li>Embedding i vektorska pretraga</li>
+          <li>MCP serveri i skill rutiranje</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h3>Embedded &amp; ostalo</h3>
+        <ul>
+          <li>Arduino, senzori, RFID</li>
+          <li>Flipper Zero (C, FAP)</li>
+          <li>Mreže — Cisco IOS osnove</li>
+          <li>Git i GitHub workflow</li>
+          <li>Servisiranje računarske opreme</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="obrazovanje">
+  <div class="wrap">
+    <div class="sec-label">04 — Obrazovanje</div>
+    <div class="sec-head">
+      <h2>ETF UCG, Podgorica</h2>
+    </div>
+
+    <div class="tl">
+      <div class="tl-item">
+        <div class="when">2024 — danas</div>
+        <h3>Studije primijenjenog računarstva</h3>
+        <p>
+          Elektrotehnički fakultet, Univerzitet Crne Gore. Broj indeksa 76/2024.
+          Fokus na programiranju, mrežama, računarskim sistemima i obradi signala.
+        </p>
+      </div>
+      <div class="tl-item">
+        <div class="when">Vanredno</div>
+        <h3>Rad u servisu za računarsku opremu</h3>
+        <p>
+          Dijagnostika i popravka hardvera, instalacija sistema, rješavanje problema
+          u realnim uslovima — iskustvo koje se ne dobija na predavanjima.
+        </p>
+      </div>
+      <div class="tl-item">
+        <div class="when">Stalno</div>
+        <h3>Samouki rad na sopstvenoj infrastrukturi</h3>
+        <p>
+          Sopstveni server, self-hosted servisi, homelab eksperimenti sa modelima i
+          automatizacijom. Najveći dio znanja o AI infrastrukturi dolazi odatle.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap">
+    <div class="contact-box">
+      <div>
+        <h2>Da nešto napravimo zajedno</h2>
+        <p>
+          Otvoren sam za praksu, freelance saradnju i projekte vezane za AI infrastrukturu,
+          backend i automatizaciju. Najbrže odgovaram na email.
+        </p>
+      </div>
+      <div class="contact-links">
+        <a class="btn btn-primary" href="mailto:dimitrije.ackovic18@gmail.com">dimitrije.ackovic18@gmail.com</a>
+        <a class="btn" href="https://github.com/xdimix18" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <p>© 2026 Dimitrije Ačković · Podgorica, Crna Gora</p>
+    <div class="foot-links">
+      <a href="#projekti">Projekti</a>
+      <a href="#vjestine">Vještine</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="/en/" hreflang="en" lang="en">English</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

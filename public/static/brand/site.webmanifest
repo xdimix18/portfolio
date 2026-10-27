@@ -1,0 +1,21 @@
+{
+  "name": "Dimitrije Ačković — Portfolio",
+  "short_name": "D. Ačković",
+  "description": "Portfolio — self-hosted AI sistemi, Python/Docker infrastruktura, embedded.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#010102",
+  "theme_color": "#010102",
+  "icons": [
+    {
+      "src": "/static/brand/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/brand/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+# Cloudflare Pages headers
+# Staticki sajt: dugi cache za assete (imena su stabilna, ali mijenjamo rijetko),
+# kratki cache za HTML da izmjene budu vidljive odmah.
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+/static/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/static/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/en/
+  Cache-Control: public, max-age=0, must-revalidate
