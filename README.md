@@ -5,8 +5,9 @@ Lični portfolio, **https://portfolio.ai-sol.me**
 Statički sajt (HTML + CSS, bez frameworka, bez build koraka, bez JavaScript-a).
 Dvojezično: crnogorski na `/`, engleski na `/en/`.
 
-Pozicioniranje: freelancer, usluge i radovi (3D dizajn i štampa, grafički dizajn,
-AI alati, serveri, elektronika, servis opreme), a ne klasičan CV studenta.
+Pozicioniranje: freelancer, usluge i radovi. Redoslijed je namjeran: **prvo hardver,
+elektronika, AI alati i serveri**, pa tek onda dizajn i 3D. 3D štampa se ne nudi kao
+usluga (nema više štampača) nego 3D dizajn i modelovanje, sa izradom preko partnera.
 
 ## Struktura
 
@@ -20,14 +21,18 @@ public/
 ├── _headers                # cache + sigurnosni headeri (Cloudflare)
 └── static/
     ├── css/site.css        # kompletan dizajn sistem (jedan fajl)
-    ├── brand/              # favicon, mark.svg, wordmark.svg, og.png, webmanifest
+    ├── brand/              # favicon, mark.svg, wordmark.svg, og.png, og-en.png, webmanifest
     └── fonts/              # Instrument Serif + Instrument Sans (woff2, self-hosted)
+
+tools/
+├── make_og.py              # generise obje OG slike (1200x630)
+└── fonts/                  # TTF verzije istih fontova, samo za generisanje OG slike
 ```
 
 ## Dizajn
 
 Svijetla, urednička tema: papirna podloga `#faf9f7`, indigo akcenat `#5b53d6` za
-tehnički dio i topla terakota `#b4623c` za dizajn i 3D. Tamna tema je podržana
+tehnički dio i topla terakota `#a4552f` za dizajn i 3D. Tamna tema je podržana
 preko `prefers-color-scheme` (nije potreban prekidač ni JavaScript).
 
 Tipografija: **Instrument Serif** za naslove, **Instrument Sans** za tekst.
@@ -35,18 +40,19 @@ Oba fonta su lokalna (`static/fonts/*.woff2`), tako da sajt ne zavisi od tuđih
 servera i nema nijedan eksterni zahtjev.
 
 Svi tokeni (boje, radijusi, sjenke, fontovi) su na jednom mjestu, u `:root`
-u `static/css/site.css`.
+u `static/css/site.css`. Dugme u primarnoj boji koristi `--accent-ink`, koji se
+mijenja uz temu, da kontrast ostane iznad 5:1 i u svijetloj i u tamnoj varijanti.
 
 ## Sekcije
 
-1. Hero, sa četiri broja i pozivom na upit
-2. Usluge, šest kartica (3D, dizajn, AI alati, serveri, elektronika, servis)
-3. Odabrani radovi, deset kartica sa SVG ilustracijom umjesto slika
+1. Hero, sa četiri broja (bez obećanja o roku odgovora)
+2. Usluge, šest kartica: servis, elektronika, AI alati, serveri, 3D dizajn, grafički dizajn
+3. Odabrani radovi, deset kartica, dizajn i 3D idu na kraju
 4. Kako radim, četiri pravila
-5. Vještine, pet kolona
+5. Vještine, pet kolona, dizajn je predzadnji
 6. O meni
 7. Iskustvo, vremenska linija
-8. Kontakt, tamni blok sa emailom, GitHub-om i Instagramom
+8. Kontakt, tamni blok sa emailom i GitHub-om; muzika je sitnim tekstom u uglu
 
 ## Cloudflare postavke
 
@@ -86,6 +92,12 @@ Deploy key (`/app/data/.ssh/id_ed25519_portfolio`) važi samo za `xdimix18/portf
 Sve je u dva HTML fajla (`public/index.html` i `public/en/index.html`), bez
 templatinga i generatora. Izmjena teksta je izmjena HTML-a, commit i push.
 Kad mijenjaš jedno jezičko izdanje, promijeni i drugo da ostanu usklađeni.
+
+OG slike se ne mijenjaju ručno:
+
+```bash
+python3 tools/make_og.py     # upisuje og.png (MNE) i og-en.png (EN)
+```
 
 ## Licenca
 

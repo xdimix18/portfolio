@@ -33,6 +33,7 @@
   --accent:#5b53d6;
   --accent-strong:#3f38b8;
   --accent-soft:#eeecfd;
+  --accent-ink:#ffffff;
   --warm:#a4552f;
   --warm-soft:#fbeee7;
   --radius:14px;
@@ -57,6 +58,7 @@
     --accent:#a9a2ff;
     --accent-strong:#c6c2ff;
     --accent-soft:#23223a;
+    --accent-ink:#16152a;
     --warm:#e08a5f;
     --warm-soft:#2e2118;
     --nav-bg:rgba(15,15,18,.86);
@@ -178,8 +180,8 @@ h1 .hl{
   transition:transform .16s,box-shadow .16s,border-color .16s,background .16s,color .16s;
 }
 .btn:hover{transform:translateY(-1px);border-color:var(--ink-3);box-shadow:var(--shadow-hover)}
-.btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}
-.btn-primary:hover{background:var(--accent-strong);border-color:var(--accent-strong);color:#fff}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{background:var(--accent-strong);border-color:var(--accent-strong);color:var(--accent-ink)}
 .btn-ghost{background:transparent;border-color:transparent;box-shadow:none;color:var(--ink-2)}
 .btn-ghost:hover{background:var(--surface-2);box-shadow:none;border-color:transparent}
 
@@ -316,13 +318,21 @@ section{padding:76px 0;border-top:1px solid var(--hairline)}
 }
 .contact-box h2{font-family:var(--font-display);font-size:clamp(26px,3.4vw,36px);font-weight:400;letter-spacing:-.02em;line-height:1.16}
 .contact-box p{margin-top:14px;font-size:16px;color:#c9c5ef;max-width:520px;line-height:1.7}
-.contact-box .fine{margin-top:12px;font-size:13.5px;color:#a09bd6}
+
 .contact-links{display:flex;flex-direction:column;gap:11px;min-width:260px}
 .contact-box .btn{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#fff;box-shadow:none}
 .contact-box .btn:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.4)}
 .contact-box .btn-primary{background:#fff;border-color:#fff;color:#1c1a45}
 .contact-box .btn-primary:hover{background:#e9e7ff;border-color:#e9e7ff;color:#1c1a45}
-@media(max-width:880px){.contact-box{padding:36px 26px}}
+.contact-aside{
+  position:absolute;right:20px;bottom:14px;
+  font-size:12px;color:rgba(200,196,240,.72);letter-spacing:.01em;
+}
+.contact-box{position:relative}
+@media(max-width:880px){
+  .contact-box{padding:36px 26px 48px}
+  .contact-aside{right:26px;bottom:16px}
+}
 
 /* ---------- podnožje ---------- */
 footer{padding:40px 0;border-top:1px solid var(--hairline);background:var(--surface-2)}
