@@ -133,8 +133,9 @@ img,svg{display:block;max-width:100%}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
 ::selection{background:var(--gold);color:var(--on-gold)}
 
-/* sve je pravo: nula zaobljenja, nula sjenki */
-.svc-card,.card,.skill-col,.facts,.contact-box,.art,.btn,.pillar{border-radius:0}
+/* bez sjenki; oštre ivice na dugmadima, panelima i trakama.
+   Kartice sa sadržajem (.svc-card, .card, .skill-col, .facts) su blago zaobljene. */
+.contact-box,.art,.btn,.pillar{border-radius:0}
 
 /* ---------- tipografija ---------- */
 h1,h2,h3,.serif{font-family:var(--font-display);font-weight:400;letter-spacing:-.005em}
@@ -297,13 +298,13 @@ section{padding:86px 0}
 .band-center .sec-label::after{display:none}
 
 /* ---------- usluge ---------- */
-.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;
-  background:rgba(207,174,123,.34);border:1px solid rgba(207,174,123,.34)}
+.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:18px}
 .svc-card{
   background:var(--cell);padding:32px 30px 34px;
-  transition:background .2s;
+  border:1px solid rgba(207,174,123,.32);border-radius:14px;
+  transition:background .2s,border-color .2s;
 }
-.svc-card:hover{background:var(--cell-hover)}
+.svc-card:hover{background:var(--cell-hover);border-color:rgba(207,174,123,.58)}
 .svc-ico{width:34px;height:34px;color:var(--gold);margin-bottom:22px}
 .svc-ico svg{width:34px;height:34px}
 .svc-card h3{font-size:19px;line-height:1.35;color:var(--gold-light)}
@@ -315,13 +316,13 @@ section{padding:86px 0}
 }
 
 /* ---------- radovi ---------- */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:1px;
-  background:var(--hairline);border:1px solid var(--hairline)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(330px,100%),1fr));gap:18px}
 .card{
   display:flex;flex-direction:column;background:var(--surface);
-  transition:background .2s;
+  border:1px solid var(--hairline);border-radius:14px;overflow:hidden;
+  transition:background .2s,border-color .2s;
 }
-.card:hover{background:var(--surface-2)}
+.card:hover{background:var(--surface-2);border-color:var(--hairline-2)}
 .art{
   height:132px;display:grid;place-items:center;position:relative;
   border-bottom:1px solid var(--hairline);
@@ -360,15 +361,17 @@ section{padding:86px 0}
 .card-note{font-size:12px;color:var(--ink-3)}
 
 /* ---------- kako radim ---------- */
-.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:34px}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:34px}
 .how-item{border-top:1px solid var(--gold);padding-top:22px}
 .how-item b{display:block;font-family:var(--font-display);font-size:18px;font-weight:400;line-height:1.4}
 .how-item p{margin-top:12px;font-size:14.5px;color:var(--ink-2);line-height:1.74}
 
 /* ---------- vještine ---------- */
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;
-  background:var(--hairline);border:1px solid var(--hairline)}
-.skill-col{background:var(--surface);padding:28px 24px 30px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:18px}
+.skill-col{
+  background:var(--surface);padding:28px 24px 30px;
+  border:1px solid var(--hairline);border-radius:14px;
+}
 .skill-col h3{
   font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
   color:var(--gold-ink);margin-bottom:20px;
@@ -382,11 +385,22 @@ section{padding:86px 0}
 .about p{color:var(--ink-2);font-size:16px;line-height:1.82}
 .about p + p{margin-top:19px}
 .about strong{color:var(--ink);font-weight:600}
-.facts{border:1px solid var(--gold);background:var(--surface)}
-.facts div{display:flex;justify-content:space-between;gap:16px;padding:16px 20px;font-size:13.5px;border-bottom:1px solid var(--hairline)}
-.facts div:last-child{border-bottom:0}
-.facts dt{color:var(--ink-3);flex-shrink:0}
-.facts dd{color:var(--ink);text-align:right;font-weight:500}
+/* Kartice sa podacima: bez tabelarnog reda, blago zaobljene, u dva stupca */
+.facts{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;
+  border:0;background:none;
+}
+.facts div{
+  display:block;padding:16px 18px;
+  border:1px solid var(--hairline);border-radius:12px;
+  background:var(--surface);
+}
+.facts dt{
+  font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold-ink);margin-bottom:7px;
+}
+.facts dd{color:var(--ink);font-size:14px;font-weight:500;line-height:1.5;text-align:left}
+@media(max-width:520px){.facts{grid-template-columns:1fr}}
 @media(max-width:900px){.about{grid-template-columns:1fr;gap:38px}}
 
 /* ---------- iskustvo ---------- */

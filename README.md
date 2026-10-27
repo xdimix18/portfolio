@@ -33,9 +33,14 @@ tools/
 
 Tema **"Gold Blue Sleek Corporate"** (po Canva dizajnu, `canva.link/eyn7mznfnefinla`):
 duboko mornarsko plava `#1f2147` i toplo zlato `#cfae7b` na papirnoj podlozi
-`#f5f2ee`. **Oštre ivice (radius 0), bez sjenki** — dubina se dobija samo bojom i
-linijom od 1 px. Tamna tema je podržana preko `prefers-color-scheme` (nije
-potreban prekidač ni JavaScript).
+`#f5f2ee`. **Bez sjenki** — dubina se dobija samo bojom i linijom od 1 px.
+
+Ivice: trake, paneli i dugmad ostaju oštri (radius 0), a **kartice sa sadržajem
+su blago zaobljene (14px) i razdvojene razmakom od 18px, bez spojenih tabelarnih
+ivica** — `.svc-card` (usluge), `.card` (radovi), `.skill-col` (vještine) i
+`.facts` (podaci u sekciji O meni, kao mreža zaobljenih polja 2x3, na mobitelu 1
+kolona). Tamna tema je podržana preko `prefers-color-scheme` (nije potreban
+prekidač ni JavaScript).
 
 Tipografija: **Libre Baskerville** za naslove (visokokontrastni serif),
 **Instrument Sans** za tekst. Oba fonta su lokalna (`static/fonts/*.woff2`),
