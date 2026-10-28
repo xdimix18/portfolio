@@ -360,6 +360,128 @@ section{padding:86px 0}
 .card-more:hover .arw{transform:translateX(4px)}
 .card-note{font-size:12px;color:var(--ink-3)}
 
+/* ---------- problemi (zvuči poznato) ---------- */
+.problems-sec{background:var(--surface-2)}
+.problems{
+  display:grid;gap:16px;
+  grid-template-columns:repeat(auto-fit,minmax(min(330px,100%),1fr));
+}
+.prob{
+  background:var(--surface);border:1px solid var(--hairline);border-radius:14px;
+  padding:26px 24px 24px;display:flex;flex-direction:column;gap:14px;
+}
+.prob .q{
+  font-family:var(--font-display);font-size:16.5px;line-height:1.5;color:var(--ink);
+  padding-left:16px;border-left:2px solid var(--gold);
+}
+.prob .a{font-size:14.5px;color:var(--ink-2);line-height:1.72}
+.prob .a b{color:var(--ink);font-weight:600}
+.problems-note{
+  margin-top:30px;padding-top:24px;border-top:1px solid var(--hairline-2);
+  font-size:15px;color:var(--ink-2);max-width:760px;line-height:1.75;
+}
+
+/* ---------- usluge: dvije grupe ---------- */
+.svc-group + .svc-group{margin-top:56px}
+.svc-group-head{
+  display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;
+  padding-bottom:14px;margin-bottom:24px;
+  border-bottom:1px solid rgba(207,174,123,.3);
+}
+.svc-group-head h3{
+  font-size:clamp(20px,2.2vw,25px);color:var(--gold-light);line-height:1.3;
+}
+.svc-group-head span{
+  font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--on-navy-2);opacity:.8;
+}
+/* druga grupa je namjerno podređena: manji naslov, bez hover akcenta */
+.svc-alt .svc-group-head{border-bottom-color:rgba(207,174,123,.16)}
+.svc-alt .svc-group-head h3{font-size:17px;color:var(--on-navy-2);font-family:var(--font-body);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.svc-alt .svc-card{background:transparent;border-color:rgba(207,174,123,.16)}
+.svc-alt .svc-card:hover{background:rgba(207,174,123,.05);border-color:rgba(207,174,123,.28)}
+.svc-alt .svc-card h3{font-size:17px}
+
+/* ishod i "za tebe" u karticama radova */
+.ishod{
+  margin-top:16px;font-size:13.5px;line-height:1.65;color:var(--ink-2);
+  padding-left:14px;border-left:2px solid var(--gold);
+}
+.ishod b{
+  font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gold-ink);display:block;margin-bottom:5px;
+}
+.foryou{
+  margin-top:16px;padding:14px 16px;border:1px solid var(--hairline);
+  border-radius:10px;background:var(--surface-2);
+  font-size:13.5px;line-height:1.68;color:var(--ink-2);
+}
+.foryou b{color:var(--ink);font-weight:600}
+
+/* ---------- proces (koraci) ---------- */
+.steps{
+  display:grid;gap:18px;
+  grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));
+}
+.step{
+  background:var(--surface);border:1px solid var(--hairline);border-radius:14px;
+  padding:26px 24px 26px;position:relative;
+}
+.step .n{
+  display:block;font-family:var(--font-display);font-size:26px;line-height:1;
+  color:var(--gold-ink);margin-bottom:16px;
+}
+.step b{
+  display:block;font-family:var(--font-display);font-size:18px;font-weight:400;
+  line-height:1.4;color:var(--ink);
+}
+.step p{margin-top:11px;font-size:14.5px;color:var(--ink-2);line-height:1.72}
+.rules-head{margin-top:74px;margin-bottom:34px}
+.rules-title{font-size:clamp(21px,2.5vw,28px)}
+
+/* ---------- dokazi ---------- */
+.proof{
+  display:grid;gap:18px;
+  grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));
+}
+.proof div{
+  background:var(--surface);border:1px solid var(--hairline);border-radius:14px;
+  padding:28px 24px 26px;border-top:3px solid var(--gold);
+}
+.proof b{
+  display:block;font-family:var(--font-display);font-size:clamp(28px,3.4vw,38px);
+  font-weight:400;line-height:1;color:var(--gold-ink);
+}
+.proof span{display:block;margin-top:12px;font-size:14px;color:var(--ink-2);line-height:1.6}
+
+/* ---------- FAQ ---------- */
+.faq{display:flex;flex-direction:column;gap:12px;max-width:880px}
+.faq details{
+  background:var(--surface);border:1px solid var(--hairline);border-radius:14px;
+  padding:0 24px;transition:border-color .18s;
+}
+.faq details:hover{border-color:var(--hairline-2)}
+.faq details[open]{border-color:var(--hairline-2)}
+.faq summary{
+  cursor:pointer;list-style:none;padding:21px 0;
+  display:flex;align-items:flex-start;gap:14px;
+  font-family:var(--font-display);font-size:17px;line-height:1.45;color:var(--ink);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{
+  content:"+";flex-shrink:0;width:14px;color:var(--gold-ink);
+  font-family:var(--font-body);font-size:19px;line-height:1.25;font-weight:500;
+}
+.faq details[open] summary::before{content:"–"}
+.faq details p{
+  padding:0 0 22px 28px;font-size:15px;color:var(--ink-2);line-height:1.75;margin:0;
+}
+
+.skills-extra{
+  margin-top:24px;font-size:14px;color:var(--ink-3);line-height:1.7;
+  padding-top:20px;border-top:1px solid var(--hairline);
+}
+
 /* ---------- kako radim ---------- */
 .how{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:34px}
 .how-item{border-top:1px solid var(--gold);padding-top:22px}
@@ -367,7 +489,7 @@ section{padding:86px 0}
 .how-item p{margin-top:12px;font-size:14.5px;color:var(--ink-2);line-height:1.74}
 
 /* ---------- vještine ---------- */
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:18px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:18px}
 .skill-col{
   background:var(--surface);padding:28px 24px 30px;
   border:1px solid var(--hairline);border-radius:14px;
@@ -435,7 +557,8 @@ section{padding:86px 0}
 }
 .contact-box h2{font-size:clamp(26px,3.2vw,36px);line-height:1.2;color:var(--gold-light)}
 .contact-box p{margin-top:16px;font-size:16px;color:var(--on-navy-2);max-width:540px;line-height:1.75}
-.contact-links{display:flex;flex-direction:column;gap:12px;min-width:290px}
+.contact-links{display:flex;flex-direction:column;gap:12px;min-width:min(290px,100%);max-width:100%}
+.contact-links .btn{max-width:100%;overflow-wrap:anywhere;text-align:left}
 .contact-box .btn{border-color:rgba(207,174,123,.55);color:var(--gold-light)}
 .contact-box .btn:hover{background:rgba(207,174,123,.14);border-color:var(--gold);color:var(--gold-light)}
 .contact-box .btn-gold{background:var(--gold);border-color:var(--gold);color:var(--on-gold)}
@@ -474,4 +597,10 @@ footer{padding:46px 0;background:var(--surface-2);border-top:1px solid var(--hai
   nav,.hero-cta,.contact-box,.art,.pillars{display:none}
   body{background:#fff;color:#000;font-size:12pt}
   .band,.hero{background:#fff;color:#000}
+  /* na papiru se FAQ otvara, inače pola sadržaja ostane skriveno */
+  .faq details{break-inside:avoid}
+  .faq details > p{display:block !important}
+  .band .sec-head h2,.band .sec-label,.svc-group-head h3,.svc-card h3,.svc-card p,
+  .svc-list span{color:#000 !important}
 }
+

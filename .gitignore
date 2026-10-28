@@ -8,3 +8,4 @@ Thumbs.db
 .cache/
 .wrangler/
 node_modules/
+tools/out/

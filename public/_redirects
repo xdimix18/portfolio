@@ -1,0 +1,3 @@
+# Cloudflare: nepostojeće rute vode na brendiranu 404 stranicu.
+# Postojeći fajlovi uvijek imaju prioritet nad ovim pravilom.
+/*  /404.html  404

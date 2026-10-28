@@ -26,7 +26,9 @@ public/
 
 tools/
 ├── make_og.py              # generise obje OG slike (1200x630)
-└── fonts/                  # TTF verzije istih fontova, samo za generisanje OG slike
+├── make_qr.py              # generise QR vizit kartu (85x55 mm, PNG + PDF)
+├── out/                    # izlaz make_qr.py (nije u gitu)
+└── fonts/                  # TTF verzije istih fontova, samo za generisanje slika
 ```
 
 ## Dizajn
@@ -52,14 +54,31 @@ mijenja uz temu, da kontrast ostane iznad 5:1 i u svijetloj i u tamnoj varijanti
 
 ## Sekcije
 
-1. Hero, sa četiri broja (bez obećanja o roku odgovora)
-2. Usluge, šest kartica: servis, elektronika, AI alati, serveri, 3D dizajn, grafički dizajn
-3. Odabrani radovi, deset kartica, dizajn i 3D idu na kraju
-4. Kako radim, četiri pravila
-5. Vještine, pet kolona, dizajn je predzadnji
-6. O meni
-7. Iskustvo, vremenska linija
-8. Kontakt, tamni blok sa emailom i GitHub-om; muzika je sitnim tekstom u uglu
+1. Hero: obećanje sa posljedicom za klijenta („rade bez tuđeg clouda"), ne lista usluga
+2. Traka sa četiri broja
+3. **Zvuči poznato?** — pet problema klijenata i šta radim povodom svakog
+4. Usluge u dvije grupe: **Ono po čemu me zovu** (servis, elektronika, serveri, AI) i
+   podređena grupa **Takođe radim** (3D dizajn, grafički dizajn)
+5. Odabrani radovi, deset kartica, svaka sa `Ishod:` linijom; tri projekta imaju i `Za tebe:`
+6. **Kako teče posao** — pet koraka, pa **četiri pravila** ispod njih
+7. **Dokazi** — četiri provjerljive činjenice iz infrastrukture
+8. **Pitanja** — FAQ na `<details>`, radi bez JavaScripta
+9. **Alati koje koristim** — tri kolone (ranije pet), bez izmišljenih nivoa
+10. O meni
+11. Iskustvo, vremenska linija
+12. Kontakt, tamni blok sa emailom i GitHub-om; muzika je sitnim tekstom u uglu
+
+### Napomena o emailu
+
+Na sajtu je **`dimitrije.ackovic18@gmail.com`**, namjerno. Provjereno je da
+`dimitrije@ai-sol.me` **ne dostavlja** poruke: test poslan sa eksternog
+(univerzitetskog) naloga nije stigao ni u INBOX, ni u Spam, ni u All Mail, dok isti
+nalog inače uredno komunicira sa Gmail-om. Domen ima MX (Cloudflare routing) i SPF,
+ali odredište nije verifikovano, a API token nema pravo na `email_routing`.
+
+Kad se to provjeri u dashboardu (Email → Email Routing → Destination addresses), na
+sajtu se adresa mijenja u dva fajla, na tri mjesta (`mailto:` u navigaciji, herou i
+kontaktu) plus u `application/ld+json`.
 
 ## Cloudflare postavke
 
@@ -104,6 +123,12 @@ OG slike se ne mijenjaju ručno:
 
 ```bash
 python3 tools/make_og.py     # upisuje og.png (MNE) i og-en.png (EN)
+```
+
+QR vizit karta za terenske izlaske (85x55 mm, 300 dpi, PNG + PDF, u `tools/out/`):
+
+```bash
+python3 tools/make_qr.py     # vizit-karta-mne i vizit-karta-en
 ```
 
 ## Licenca

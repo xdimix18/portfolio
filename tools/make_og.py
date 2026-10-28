@@ -114,15 +114,15 @@ def render(title_lines, sub_lines, chips, place, out):
 
 
 def main():
-    render([("Popravim, sklopim", False), ("i postavim.", True)],
-           ["Servis i dijagnostika opreme · Elektronika i embedded",
-            "AI alati i serveri · 3D dizajn i tehnicki crtezi"],
+    render([("Sredjujem hardver", False), ("i postavljam alate.", True)],
+           ["Servis i dijagnostika · Elektronika i ugradnja",
+            "Serveri i mreze · AI alati bez tudjeg clouda"],
            ["Hardver", "AI", "Serveri", "3D dizajn"],
            "Podgorica, Crna Gora", OUT)
 
-    render([("I fix it, build it", False), ("and set it up.", True)],
-           ["Repair and diagnostics · Electronics and embedded",
-            "AI tooling and servers · 3D design and drawings"],
+    render([("I fix hardware", False), ("and set up the tools.", True)],
+           ["Diagnostics and repair · Electronics and installation",
+            "Servers and networks · AI tooling, no outside cloud"],
            ["Hardware", "AI", "Servers", "3D design"],
            "Podgorica, Montenegro", OUT.replace("og.png", "og-en.png"))
 
