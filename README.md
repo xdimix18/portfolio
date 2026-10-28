@@ -56,17 +56,19 @@ mijenja uz temu, da kontrast ostane iznad 5:1 i u svijetloj i u tamnoj varijanti
 
 1. Hero: obećanje sa posljedicom za klijenta („rade bez tuđeg clouda"), ne lista usluga
 2. Traka sa četiri broja
-3. **Zvuči poznato?** — pet problema klijenata i šta radim povodom svakog
-4. Usluge u dvije grupe: **Ono po čemu me zovu** (servis, elektronika, serveri, AI) i
+3. **Usluge** u dvije grupe: **Ono po čemu me zovu** (servis, elektronika, serveri, AI) i
    podređena grupa **Takođe radim** (3D dizajn, grafički dizajn)
-5. Odabrani radovi, deset kartica, svaka sa `Ishod:` linijom; tri projekta imaju i `Za tebe:`
-6. **Kako teče posao** — pet koraka, pa **četiri pravila** ispod njih
-7. **Dokazi** — četiri provjerljive činjenice iz infrastrukture
-8. **Pitanja** — FAQ na `<details>`, radi bez JavaScripta
-9. **Alati koje koristim** — tri kolone (ranije pet), bez izmišljenih nivoa
-10. O meni
-11. Iskustvo, vremenska linija
-12. Kontakt, tamni blok sa emailom i GitHub-om; muzika je sitnim tekstom u uglu
+4. **Odabrani radovi** — deset kartica; tri projekta imaju `Za tebe:` liniju sa onim što klijent dobija
+5. **Kako radim** — četiri pravila koja se ne mijenjaju
+6. **Alati koje koristim** — tri kolone bez izmišljenih nivoa
+7. O meni
+8. Iskustvo, vremenska linija
+9. Kontakt, tamni blok sa emailom i GitHub-om; muzika je sitnim tekstom u uglu
+
+Privatnost podataka se pominje **jednom**, u heroju („bez tuđeg clouda"). Ranije se
+ponavljala na svakoj kartici radova, u servisnoj kartici i u pravilima; to je uklonjeno
+28.10.2026. Iz istog prolaza su izbačene i sekcije „Zvuči poznato?", proces u pet
+koraka, „Dokazi" i FAQ.
 
 ### Napomena o emailu
 
